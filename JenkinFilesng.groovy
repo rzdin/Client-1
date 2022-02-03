@@ -27,7 +27,7 @@ pipeline {
             tools {nodejs "NODEJS"}
             steps {
                 sh 'rm -rf *.zip'
-                sh "npm install"
+                sh "npm install -g"
                 sh "ng build --prod"
                 echo "***********LINE***********"
                 echo "**********LINE2***********"
