@@ -30,7 +30,7 @@ pipeline {
                 sh "npm install"
                 sh "ng lint"
                 sh "ng e2e"
-                sh "ng build --configuration" 
+                sh "ng build --prod" 
                 
                 echo "**********LINE2***********"
                 
