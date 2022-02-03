@@ -38,7 +38,7 @@ pipeline {
                
                
     
-                sh "zip 'myapp_${BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip' /workspace/client-1/*"
+                sh "zip 'myapp_${env.BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip' /workspace/client-1/*"
                 
              
                 
@@ -47,7 +47,7 @@ pipeline {
        stage("Upload"){
             steps{
                 withAWS(credentials: "${aws_credential}", region: "${region}"){
-                s3Upload(file:"myapp_${BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip", bucket:"${bucket}/${env.BUILD_VERSION}")
+                s3Upload(file:"myapp_${env.BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip", bucket:"${bucket}/${env.BUILD_VERSION}")
                
                   }
             }
