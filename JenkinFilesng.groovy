@@ -31,7 +31,7 @@ pipeline {
                 sh "npm install"
                 sh "ng test"
                 sh "g e2e"
-                sh "ng build 
+                sh "ng build" 
                 
                 echo "**********LINE2***********"
                 
