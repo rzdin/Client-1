@@ -29,9 +29,7 @@ pipeline {
                 sh 'rm -rf *.zip'
                 sh "npm install -g @angular/cli"
                 sh "npm install"
-                sh "ng test"
-                sh "g e2e"
-                sh "ng build" 
+                sh "ng build --configuration" 
                 
                 echo "**********LINE2***********"
                 
