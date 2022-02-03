@@ -24,7 +24,7 @@ pipeline {
         }
     }
         stage("Nodejs build"){
-            
+            tools {nodejs "NODEJS"}
             steps {
                 sh 'rm -rf *.zip'
                 sh "npm install"
