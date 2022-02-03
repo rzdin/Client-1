@@ -29,7 +29,7 @@ pipeline {
                 sh 'rm -rf *.zip'
                 sh "npm install -g @angular/cli"
                 sh "npm install"
-                sh "ng build --prod" 
+                sh "ng build --configuration" 
                 
                 echo "**********LINE2***********"
                 
@@ -38,7 +38,7 @@ pipeline {
                
                
     
-                sh "zip 'myapp_${BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip' Client-1/* "
+                sh "zip 'myapp_${BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip'  angular.json  e2e  node_modules  package-lock.json  src  tslint.json dist  JenkinFilesng.groovy  package.json  README.md   tsconfig.json"
                 
              
                 
