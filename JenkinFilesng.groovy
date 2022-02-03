@@ -30,8 +30,8 @@ pipeline {
 
                 sh "npm install -g npm"
                 sh "npm install -g @angular/cli"
-                sh "npm run ng"
-                sh "ng build --prod"
+                sh "npm run ng....."
+                sh "ng build --configuration"
                 echo "***********LINE***********"
                 echo "**********LINE2***********"
                 
