@@ -27,9 +27,12 @@ pipeline {
             tools {nodejs "NODEJS"}
             steps {
                 sh 'rm -rf *.zip'
+                sh "npm install -g @angular/cli"
                 sh "npm install"
-                sh "ng build --configuration"
-                echo "***********LINE***********"
+                sh "ng test"
+                sh "g e2e"
+                sh "ng build 
+                
                 echo "**********LINE2***********"
                 
                 
