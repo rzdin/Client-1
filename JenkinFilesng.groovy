@@ -29,6 +29,7 @@ pipeline {
                 sh 'rm -rf *.zip'
                 sh "npm install"
                 sh "ng lint"
+                sh "ng test"
                 sh "ng e2e"
                 sh "ng build --prod" 
                 
