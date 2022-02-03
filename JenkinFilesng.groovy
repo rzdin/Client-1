@@ -29,9 +29,7 @@ pipeline {
                 sh 'rm -rf *.zip'
 
                 sh "npm install -g npm"
-                sh "npm fund"
-                sh "npm audit fix"
-                sh "npm run ng"
+                sh "npm install -g @angular/cli"
                 sh "ng build --prod"
                 echo "***********LINE***********"
                 echo "**********LINE2***********"
