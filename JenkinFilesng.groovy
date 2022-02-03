@@ -38,7 +38,7 @@ pipeline {
                
                
     
-                sh "zip 'myapp_${BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip' . "
+                sh "zip 'myapp_${BUILD_TIMESTAMP}_${env.BUILD_VERSION}.zip' Client-1/* "
                 
              
                 
