@@ -28,6 +28,7 @@ pipeline {
             steps {
                 sh 'rm -rf *.zip'
                 sh "npm install -g"
+                sh "npm run ng"
                 sh "ng build --prod"
                 echo "***********LINE***********"
                 echo "**********LINE2***********"
